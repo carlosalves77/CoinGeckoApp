@@ -1,5 +1,6 @@
 package com.carlos.coingecko.domain.repository
 
+import com.carlos.coingecko.data.data_source.dto.CoinDTO.CoinDTO
 import com.carlos.coingecko.data.data_source.dto.CoinListDTO.CoinsListDTOItem
 
 interface CoinRepository {

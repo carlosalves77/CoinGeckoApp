@@ -1,5 +1,6 @@
 package com.carlos.coingecko.data.repository
 
+import com.carlos.coingecko.data.data_source.dto.CoinDTO.CoinDTO
 import com.carlos.coingecko.data.data_source.dto.CoinGeckoAPI
 import com.carlos.coingecko.data.data_source.dto.CoinListDTO.CoinsListDTOItem
 import com.carlos.coingecko.domain.repository.CoinRepository

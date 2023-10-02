@@ -1,6 +1,5 @@
 package com.carlos.coingecko.data.data_source.dto
 
-import com.carlos.coingecko.data.data_source.dto.CoinDTO.CoinDTO
 import com.carlos.coingecko.data.data_source.dto.CoinListDTO.CoinsListDTOItem
 import retrofit2.http.GET
 import retrofit2.http.Path

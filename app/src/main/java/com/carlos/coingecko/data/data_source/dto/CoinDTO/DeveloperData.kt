@@ -2,7 +2,7 @@ package com.carlos.coingecko.data.data_source.dto.CoinDTO
 
 data class DeveloperData(
     val closed_issues: Int,
-    val code_additions_deletions_4_weeks: com.carlos.coingecko.data.data_source.dto.CoinDTO.CodeAdditionsDeletions4Weeks,
+    val code_additions_deletions_4_weeks: CodeAdditionsDeletions4Weeks,
     val commit_count_4_weeks: Int,
     val forks: Int,
     val last_4_weeks_commit_activity_series: List<Int>,

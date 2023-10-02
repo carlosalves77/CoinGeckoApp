@@ -1,4 +1,4 @@
-package com.carlos.coingecko.ui
+package com.carlos.coingecko.utils
 
 object Constants {
 

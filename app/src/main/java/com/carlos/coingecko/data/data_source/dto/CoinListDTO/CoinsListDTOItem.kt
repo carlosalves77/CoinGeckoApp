@@ -1,5 +1,7 @@
 package com.carlos.coingecko.data.data_source.dto.CoinListDTO
 
+import com.carlos.coingecko.domain.model.Coin
+
 data class CoinsListDTOItem(
     val ath: Double,
     val ath_change_percentage: Double,
@@ -27,4 +29,18 @@ data class CoinsListDTOItem(
     val symbol: String,
     val total_supply: Double,
     val total_volume: Double
-)
+) {
+    fun toCoin(): Coin {
+        return Coin(
+            name = name,
+            market_cap = market_cap,
+            price = current_price,
+            price_percent_change = price_change_24h,
+            image = image,
+            id = id,
+            lowPrice = low_24h,
+            highPrice = high_24h
+
+        )
+    }
+}

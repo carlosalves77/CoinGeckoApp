@@ -12,24 +12,24 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class CoinDetailViewModel @Inject constructor(
+class CoinViewModel @Inject constructor(
     private val coinUseCase: CoinUseCase
 ) : ViewModel(){
 
-    private val coinDetail = MutableStateFlow(CoinDetailState())
-    var _coinDetail : StateFlow<CoinDetailState> = coinDetail
+    private val coinDetail = MutableStateFlow(CoinState())
+    var _coinDetail : StateFlow<CoinState> = coinDetail
 
     fun getCoinDetailById(id : String) = viewModelScope.launch(Dispatchers.IO) {
         coinUseCase(id).collect { result ->
             when (result) {
                 is ResponseState.Success -> {
-                    coinDetail.value = CoinDetailState(coinDetail = result.data)
+                    coinDetail.value = CoinState(coinDetail = result.data)
                 }
                 is ResponseState.Loading -> {
-                    coinDetail.value = CoinDetailState(isLoading = true)
+                    coinDetail.value = CoinState(isLoading = true)
                 }
                 is ResponseState.Error -> {
-                    coinDetail.value = CoinDetailState(error = result.message?: "An Unexpected Error")
+                    coinDetail.value = CoinState(error = result.message?: "An Unexpected Error")
                 }
 
             }

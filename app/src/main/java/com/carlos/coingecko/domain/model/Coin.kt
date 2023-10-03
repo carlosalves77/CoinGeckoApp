@@ -9,5 +9,4 @@ data class Coin(
     val price_percent_change: Double,
     val lowPrice: Double,
     val highPrice: Double,
-
     )

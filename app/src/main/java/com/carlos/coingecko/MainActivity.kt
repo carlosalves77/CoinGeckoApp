@@ -20,6 +20,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
@@ -63,6 +64,8 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
         CoroutineScope(Dispatchers.IO).launch {
             coinListViewModel.getAllCoins(page.toString())
             coinListViewModel._coinListValue.collectLatest { coinListValue ->
+                withContext(Dispatchers.IO) {
+
                 if (coinListValue.isLoading) {
                     binding.progressBar.visibility = View.VISIBLE
                 } else {
@@ -76,6 +79,7 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
                         coinAdapter.setData(tempCoinList as ArrayList<Coin>)
                     }
 
+                }
                 }
             }
         }
@@ -119,7 +123,5 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
         return true
     }
 
-    override fun onStart() {
-        super.onStart()
-    }
+
 }

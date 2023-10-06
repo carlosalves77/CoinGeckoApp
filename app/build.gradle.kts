@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace = "com.carlos.coingecko"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.carlos.coingecko"
         minSdk = 27
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -62,13 +62,14 @@ dependencies {
     implementation("androidx.room:room-ktx:2.5.2")
 
     // Coroutines
-    implementation("org.jetbrains.kotlin:kotlinx-coroutines-core:1.6.4")
-    implementation("org.jetbrains.kotlin:kotlinx-coroutines-android:1.6.4")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+//    implementation("org.jetbrains.kotlin:kotlinx-coroutines-android:1.6.4")
 
     // Retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
-    implementation("com.squareup.okhttp3: logging-interceptor:5.0.0-alpha.3")
+    implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3")
     implementation("com.google.code.gson:gson:2.9.0")
 
     implementation("com.squareup.picasso:picasso:2.71828")

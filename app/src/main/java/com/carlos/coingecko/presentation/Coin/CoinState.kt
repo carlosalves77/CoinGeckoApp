@@ -1,4 +1,4 @@
-package com.carlos.coingecko.presentation.CoinDetail
+package com.carlos.coingecko.presentation.Coin
 
 import com.carlos.coingecko.domain.model.CoinDetail
 

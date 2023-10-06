@@ -3,4 +3,5 @@
     <string name="coin_name">Coin Name</string>
     <string name="coinImage">coinImage</string>
     <string name="search_coin">Search Coin</string>
+    <string name="imageviewdetail">ImageViewDetail</string>
 </resources>

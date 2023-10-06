@@ -1,4 +1,4 @@
-package com.carlos.coingecko.presentation.CoinDetail
+package com.carlos.coingecko.presentation.Coin
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
